@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="loveTimer"></div>
+
+<!-- КОНВЕРТ -->
+<div class="envelope-wrapper" id="envelope">
+    <img
+        src="https://i.pinimg.com/736x/f2/13/c4/f213c4ac25b773f8ec503e19ef0df5c3.jpg"
+        class="envelope-img"
+        alt="Конверт"
+    />
+</div>
+<!-- 🌸 ОКНО С БУКЕТОМ -->
+<div class="modal hidden" id="flowersWindow">
+    <div class="modal-content flowers-content">
+
+        <span class="back" id="backToFoldersFromFlowers">←</span>
+
+        <img
+            src="./images/flowers.avif"
+            class="flowers-img"
+            alt="Букет"
+        >
+
+        <p id="flowersText"></p>
+
+    </div>
+</div>
+
+<!-- ОКНО С ТЕКСТОМ -->
+<div class="modal hidden" id="textWindow">
+    <div class="modal-content">
+        <span class="back" id="closeWindow">←</span>
+        <p id="typedText"></p>
+        <button class="surprise-btn">Открой сюрприз 💌</button>
+    </div>
+</div>
+
+<!-- ОКНО С ПАПКАМИ -->
+<div class="modal hidden" id="foldersWindow">
+    <div class="modal-content folders-content">
+        <span class="back" id="backToText">←</span>
+        <h2>Сюрприз файлы 💌</h2>
+
+        <div class="folders">
+            <div class="folder" id="folder1">
+                <img src="https://img.icons8.com/stickers/1200/pink-cute-folder.jpg">
+                <span>Сюрприз 1</span>
+            </div>
+
+           <div class="folder" id="folder2">
+    <img src="https://img.icons8.com/stickers/1200/pink-cute-folder.jpg">
+    <span>Сюрприз 2</span>
+</div>
+
+            <div class="folder" id="folder3">
+    <img src="https://img.icons8.com/stickers/1200/pink-cute-folder.jpg">
+    <span>Сюрприз 3</span>
+</div>
+
+            <div class="folder" id="folder4">
+                <img src="https://img.icons8.com/stickers/1200/pink-cute-folder.jpg">
+                <span>Сюрприз 4</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ОКНО С ФОТО -->
+<div class="modal hidden" id="photoWindow">
+    <div class="modal-content">
+        <span class="back" id="backToFolders">←</span>
+        <h2>Мы свиноты 💖</h2>
+
+        <div class="photo-grid">
+            <div class="photo-card">
+                <img src="./images/photo1.png" alt="photo 1">
+            </div>
+            <div class="photo-card">
+                <img src="./images/photo2.png" alt="photo 2">
+            </div>
+            <div class="photo-card">
+                <img src="./images/photo3.png" alt="photo 3">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 🎬 ОКНО С ВИДЕО -->
+<div class="modal hidden" id="videoWindow">
+    <div class="modal-content">
+
+        <span class="back" id="backToFoldersFromVideo">←</span>
+
+        <h2>🎥 😂😂👌👌</h2>
+
+       <video id="loveVideo" controls autoplay>
+    <source src="./video/love.mp4" type="video/mp4">
+    Твой браузер не поддерживает видео.
+</video>
+
+
+    </div>
+</div>
+
+
+
+<!-- 🎵 КНОПКА -->
+<div id="musicToggle">🔊</div>
+
+<!-- 🎵 SoundCloud -->
+<iframe
+    id="scPlayer"
+    width="0"
+    height="0"
+    allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/327276275&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false">
+</iframe>
+<div class="modal hidden" id="gameWindow">
+    <div class="modal-content">
+        <span class="back" id="backToFoldersFromGame">←</span>
+        <h2>Поймай сердечко 💘</h2>
+
+        <div id="score">Очки: 0</div>
+        <div id="gameArea"></div>
+     <div id="winScreen" class="hidden">
+    <h2 class="win-text">Ты моя умничка, ты победила 💖</h2>
+
+    <button id="restartGame">Играть ещё 💘</button>
+    <button id="toFoldersFromWin">К папкам 📁</button>
+</div>
+
+
+    </div>
+</div>
+
+
+<script src="https://w.soundcloud.com/player/api.js"></script>
+<script src="./dist/main.js"></script>
+
+</body>
+</html>
